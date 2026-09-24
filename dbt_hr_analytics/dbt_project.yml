@@ -3,7 +3,6 @@
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
 name: 'dbt_hr_analytics'
-config_version: 2
 version: '1.0.0'
 
 # This setting configures which "profile" dbt uses for this project.
@@ -31,6 +30,5 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   dbt_hr_analytics:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+      +materialized: table
+      +schema: demo
